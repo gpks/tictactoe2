@@ -31,10 +31,10 @@ $( document ).ready(function() {
     function checkWin (){
         var arrayOfSum = sumArray();
         if($.inArray(3, arrayOfSum)!== -1 || $.inArray(12, arrayOfSum) !== -1){
-            alert("wygrałeś");
+            swal("wygrałeś");
             resetGame();
         }else if ($.inArray(null, [].concat.apply([],matrix))===-1){
-            alert("remis");
+            swal("remis")
             resetGame(); 
         }
     };
